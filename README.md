@@ -1,36 +1,32 @@
 # Install
 
-**Chrome version 95 is required to execute the crawler.**
-
-Install it in a virtual environment.
-
 ```
 git clone https://github.com/hjk1996/instagram-image-crawler.git
-cd instagram-image-crawler
-pip install -r requirements.txt
 ```
 
-# Crawling
+# Run
 
-## 1. Set ID and password
+The default storage path is a sub-folder of resized_images that is the same as the folder name containing the original image.
 
-Set the ID and password of the Instagram account to be used for crawling in config.env.
+--src: The directory of the folder with the image to be resized.
 
-![image](https://user-images.githubusercontent.com/82424229/141061835-73f78b9b-e783-4aad-bd86-ff91304fe49f.png)
+--width: Width of a resized image.
 
+--height: Height of a resized image.
 
-## 2. Run
+--save_dir(optional): When you enter the storage path, images are stored in the input path. 
 
---tag: The tag of the image you want to collect.
-
---n_imgs: The number of images you want to collect.
-
---headless(optional): If the value is True, crawling is performed in headless mode.
+--inplace(optional: boolean): Whether to save the images inplace or not.
 
 ```
-python main.py --tag chicken --n_imgs 100
-  ```
+python main.py --src ./your/image/folder/path --width 640 --height 640
+```
+```
+python main.py --src ./your/image/folder/path --width 640 --height 640 --inplace True
+```
+```
+python main.py --src ./your/image/folder/path --width 640 --height 640 --save_dir C:\Users
+```
 
-## Images
 
-Images are stored in a folder of tag names in the images folder.
+
