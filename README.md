@@ -18,6 +18,8 @@ The default storage path is a sub-folder of resized_images that is the same as t
 
 --inplace(optional: boolean): Whether to save the images inplace or not.
 
+
+## Examples
 ```
 python main.py --src ./your/image/folder/path --width 640 --height 640
 ```
